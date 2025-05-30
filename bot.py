@@ -30,6 +30,10 @@ def make_some(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_message(message):
-    bot.reply_to(message, message.text, can_delete_messages=True, can_restrict_members=True, can_delete_stories=True, can_edit_messages=True)
+    bot.reply_to(message, message.text,
+                 can_delete_messages=True,
+                 can_restrict_members=True,
+                 can_delete_stories=True,
+                 can_edit_messages=True)
 
 bot.infinity_polling(none_stop=True)
